@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Name Sneaker Bot</title>
+    <!-- Core CSS - Include with every page -->
+    <link href="{{ url_for('static',filename='plugins/bootstrap/bootstrap.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static',filename='font-awesome/css/font-awesome.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static',filename='plugins/pace/pace-theme-big-counter.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static',filename='css/main-style.css') }}" rel="stylesheet" />
+    <!-- Page-Level CSS -->
+    <link href="{{ url_for('static',filename='plugins/morris/morris-0.4.3.min.css') }}" rel="stylesheet" />
+   </head>
+   <style>
+   .input-1, .input-2{
+        display: inline-block;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        float: left;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;         /* Opera/IE 8+ */
+    }
+    .input-1{
+        width: 70%; /* input-1 + input-2 = 100% */
+    }
+    .input-2{
+        width: 30%; /* input-1 + input-2 = 100% */
+    }
+    .input-box{
+        height: 32px; /* Own value - full height */
+        width: 200px; /* Own value - full width */
+    }
+</style>
+<body>
+<div style='width: 95%;margin:0 auto;'>
+    <!--  wrapper -->
+
+        
+                <!-- Welcome -->
+                {% include 'topBar.html' %}
+                <!--end  Welcome -->
+                <!--end quick info section -->
+            <div class="row">
+                <div class="col-lg-8">
+
+
+
+                    <!-- {% include 'areaChart.html' %} -->
+                     <!-- that chart thing - probably won't use this... -->
+
+                    {% include 'driverInfo.html' %}
+                    <!--Simple table example -->
+                    {% include 'simpleTable.html' %}
+
+                    <!--End simple table example -->
+                    
+                    {% include 'urlGen.html' %}
+
+
+                    {% include 'updateHeaders.html' %}
+
+                </div>
+
+                <div class="col-lg-4">
+                    {% include 'gitCommits.html' %}
+
+                    {% include 'dataUpload.html' %}
+
+                    
+                    
+
+
+
+
+
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <!-- Notifications-->
+                   <!--{% include 'notificationPanel.html' %}-->
+                    <!--End Notifications-->
+                </div>
+                <div class="col-lg-4">
+                    <!-- Donut Example-->
+                    <!-- {% include 'donutPanel.html' %}-->
+                    <!--End Donut Example-->
+                </div>
+                <div class="col-lg-4">
+                    <!-- Chat Panel Example-->
+                    <!--{% include 'chatPanel.html' %}-->
+                    <!--End Chat Panel Example-->
+                </div>
+            </div>
+
+
+         
+
+
+        </div>
+        <!-- end page-wrapper -->
+
+    </div>
+
+    </div>
+    <!-- end wrapper -->
+
+    <!-- Core Scripts - Include with every page -->
+    <script src="assets/plugins/jquery-1.10.2.js"></script>
+    <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="assets/plugins/pace/pace.js"></script>
+    <script src="assets/scripts/siminta.js"></script>
+    <!-- Page-Level Plugin Scripts-->
+    <script src="assets/plugins/morris/raphael-2.1.0.min.js"></script>
+    <script src="assets/plugins/morris/morris.js"></script>
+    <script src="assets/scripts/dashboard-demo.js"></script>
+
+</body>
+
+</html>
